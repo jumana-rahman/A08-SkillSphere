@@ -10,9 +10,18 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const navLinks = [
-        { name: "Home", path: "/" },
-        { name: "Courses", path: "/courses" },
-        { name: "My Profile", path: "/profile" },
+        { 
+            name: "Home", 
+            path: "/" 
+        },
+        { 
+            name: "Courses", 
+            path: "/courses" 
+        },
+        { 
+            name: "My Profile", 
+            path: "/profile" 
+        },
     ];
 
     return (
@@ -55,6 +64,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
+                {/* Buttons */}
                 <div className="hidden lg:flex items-center">
                     <ul className="flex items-center text-md gap-3 font-medium text-gray-700">
                         <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white">
@@ -70,7 +80,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
-                    className="lg:hidden text-3xl text-purple-700"
+                    className="lg:hidden text-3xl text-black"
                 >
                     ☰
                 </button>
