@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Williams",
+    "designation": "UI/UX Design Expert",
+    "experience": "8 Years Experience",
+    "students": "12K+ Students",
+    "image": "/public/images/course-1.avif"
+  },
+  {
+    "id": 2,
+    "name": "Michael Brown",
+    "designation": "Digital Marketing Specialist",
+    "experience": "10 Years Experience",
+    "students": "18K+ Students",
+    "image": "/public/images/course-2.avif"
+  },
+  {
+    "id": 3,
+    "name": "Emily Johnson",
+    "designation": "Data Science Mentor",
+    "experience": "7 Years Experience",
+    "students": "9K+ Students",
+    "image": "/public/images/course-3.avif"
+  },
+  {
+    "id": 4,
+    "name": "David Wilson",
+    "designation": "Mobile App Developer",
+    "experience": "6 Years Experience",
+    "students": "11K+ Students",
+    "image": "/public/images/course-4.avif"
+  },
+  {
+    "id": 5,
+    "name": "Sophia Martinez",
+    "designation": "Graphic Design Instructor",
+    "experience": "9 Years Experience",
+    "students": "14K+ Students",
+    "image": "/public/images/course-5.avif"
+  },
+  {
+    "id": 6,
+    "name": "James Anderson",
+    "designation": "Full Stack Web Developer",
+    "experience": "11 Years Experience",
+    "students": "20K+ Students",
+    "image": "/public/images/course-6.avif"
+  }
+]

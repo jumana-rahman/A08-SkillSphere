@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Learn full-stack web development with HTML, CSS, JavaScript, React, Node.js, and MongoDB.",
+    "image": "/src/assets/images/course-1.avif",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Williams",
+    "duration": "15 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Master user interface and user experience design principles using Figma and modern design systems.",
+    "image": "/src/assets/images/course-2.avif",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Strategy",
+    "instructor": "Michael Brown",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, content strategy, and online advertising from scratch.",
+    "image": "/src/assets/images/course-3.avif",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Data Science & Machine Learning",
+    "instructor": "Emily Johnson",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Build machine learning models and analyze real-world datasets using Python and popular libraries.",
+    "image": "/src/assets/images/course-4.avif",
+    "category": "Data Science"
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Development with Flutter",
+    "instructor": "David Wilson",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Create beautiful and responsive mobile apps for Android and iOS using Flutter and Dart.",
+    "image": "/src/assets/images/course-5.avif",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Design Essentials",
+    "instructor": "Sophia Martinez",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn typography, color theory, branding, and visual design using Adobe Photoshop and Illustrator.",
+    "image": "/src/assets/images/course-6.avif",
+    "category": "Design"
+  }
+]
