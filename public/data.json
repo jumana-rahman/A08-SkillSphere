@@ -7,7 +7,7 @@
     "rating": 4.9,
     "level": "Beginner",
     "description": "Learn full-stack web development with HTML, CSS, JavaScript, React, Node.js, and MongoDB.",
-    "image": "/src/assets/images/course-1.avif",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Master user interface and user experience design principles using Figma and modern design systems.",
-    "image": "/src/assets/images/course-2.avif",
+    "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=1200&auto=format&fit=crop",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Learn SEO, social media marketing, content strategy, and online advertising from scratch.",
-    "image": "/src/assets/images/course-3.avif",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Build machine learning models and analyze real-world datasets using Python and popular libraries.",
-    "image": "/src/assets/images/course-4.avif",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop",
     "category": "Data Science"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Create beautiful and responsive mobile apps for Android and iOS using Flutter and Dart.",
-    "image": "/src/assets/images/course-5.avif",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop",
     "category": "Development"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn typography, color theory, branding, and visual design using Adobe Photoshop and Illustrator.",
-    "image": "/src/assets/images/course-6.avif",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
     "category": "Design"
   }
 ]
