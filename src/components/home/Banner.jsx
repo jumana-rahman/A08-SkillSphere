@@ -10,6 +10,7 @@ import { TypeAnimation } from "react-type-animation";
 import Banner1 from "@/assets/banner1.avif"
 import Banner2 from "@/assets/banner2.avif"
 import Banner3 from "@/assets/banner3.avif"
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const slides = [
     {
@@ -82,9 +83,19 @@ const Banner = () => {
                                 className="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight drop-shadow-lg"
                                 />
 
-                                <p className="mt-6 text-gray-200 text-base md:text-xl leading-8 max-w-2xl mx-auto">
+                                <p className="mt-6 text-gray-300 text-base md:text-xl leading-8 max-w-2xl mx-auto">
                                     {slide.description}
                                 </p>
+
+                                {/* BUTTON */}
+                                <div className="mt-8">
+                                    <a
+                                        href="/courses"
+                                        className="inline-block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg"
+                                    >
+                                        <span className="flex items-center gap-2">Learn More <FaArrowUpRightFromSquare /></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
