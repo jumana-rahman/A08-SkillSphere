@@ -60,6 +60,7 @@ const Banner = () => {
                                 backgroundImage: `url(${slide.image})`,
                             }}
                         >
+                            
                             {/* Dark Overlay */}
                             <div className="absolute inset-0 bg-black/70"></div>
 
@@ -70,6 +71,9 @@ const Banner = () => {
 
                             {/* Content */}
                             <div className="relative z-10 text-center px-4 max-w-4xl">
+                                <span className="inline-block bg-purple-100 text-purple-700 font-semibold px-4 py-2 rounded-full text-sm mb-8">
+                                    Top Rated Learning Paths
+                                </span>
                                 <TypeAnimation
                                 sequence={[
                                     slide.title,
