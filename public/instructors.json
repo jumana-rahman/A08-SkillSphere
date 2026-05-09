@@ -5,7 +5,7 @@
     "designation": "UI/UX Design Expert",
     "experience": "8 Years Experience",
     "students": "12K+ Students",
-    "image": "/src/assets/images/course-1.avif"
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "designation": "Digital Marketing Specialist",
     "experience": "10 Years Experience",
     "students": "18K+ Students",
-    "image": "/src/assets/images/course-2.avif"
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "designation": "Data Science Mentor",
     "experience": "7 Years Experience",
     "students": "9K+ Students",
-    "image": "/src/assets/images/course-3.avif"
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "designation": "Mobile App Developer",
     "experience": "6 Years Experience",
     "students": "11K+ Students",
-    "image": "/src/assets/images/course-4.avif"
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "designation": "Graphic Design Instructor",
     "experience": "9 Years Experience",
     "students": "14K+ Students",
-    "image": "/src/assets/images/course-5.avif"
+    "image": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": 6,
@@ -45,6 +45,6 @@
     "designation": "Full Stack Web Developer",
     "experience": "11 Years Experience",
     "students": "20K+ Students",
-    "image": "/src/assets/images/course-6.avif"
+    "image": "https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=1200&auto=format&fit=crop"
   }
 ]
