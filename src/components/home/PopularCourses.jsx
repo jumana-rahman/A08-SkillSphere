@@ -1,4 +1,4 @@
-import CoursesCard from "./CoursesCard";
+import CoursesCard from "../ui/CoursesCard";
 
 const PopularCourses = async () => {
     const res = await fetch('https://a08-skill-sphere.vercel.app/data.json')
