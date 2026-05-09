@@ -54,7 +54,7 @@ const CoursesCard = ({ course }) => {
                         </Link>
 
                     </div>
-                </Card>
+            </Card>
         </div>
     );
 };
