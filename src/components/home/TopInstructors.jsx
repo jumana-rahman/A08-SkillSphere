@@ -33,14 +33,10 @@ const TopInstructors = () => {
     }, []);
 
     return (
-        <section className="py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-white to-purple-50 overflow-hidden">
+        <section className="py-20 px-4 md:px-6 lg:px-8 bg-purple-50 overflow-hidden">
 
             {/* Heading */}
             <div className="max-w-7xl mx-auto text-center">
-
-                <span className="inline-block bg-purple-100 text-purple-800 font-semibold px-5 py-2 rounded-full text-sm">
-                    Learn From Experts
-                </span>
 
                 <div className="relative inline-block overflow-hidden mt-5">
 
