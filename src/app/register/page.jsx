@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 
 import {
@@ -13,8 +14,11 @@ import {
     TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function RegisterPage() {
+    const router = useRouter();
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -23,6 +27,32 @@ export default function RegisterPage() {
         const image = e.target.image.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+
+        const {data, error} = await authClient.signUp.email({
+            name,
+            image,
+            email,
+            password
+        });
+
+        // Error Alert
+        if (error) {
+            toast.error(error.message || "Registration Failed!", {
+                position: "top-center",
+            });
+
+            return;
+        }
+
+        // Success Alert
+        if (data) {
+            router.push('/');
+            toast.success("Registration Successful!", {
+                position: "top-center",
+            });
+
+            e.target.reset();
+        }
     };
 
     return (
@@ -40,7 +70,7 @@ export default function RegisterPage() {
 
                     <div className="relative inline-block overflow-hidden mt-5">
 
-                        <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 bg-clip-text text-transparent">
+                        <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 py-2 bg-clip-text text-transparent">
                             Register
                         </h1>
 
@@ -214,6 +244,14 @@ export default function RegisterPage() {
                 `}</style>
 
             </Card>
+
+            <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            theme="colored"
+            />
         </section>
+
+        
     );
 }
