@@ -5,8 +5,9 @@ export const metadata = {
   title: "SkillSphere | Profile",
 };
 
+
 const ProfilePage = () => {
- 
+    
     return (
         <div>
             <MyProfile/>

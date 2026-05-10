@@ -13,10 +13,13 @@ import {
     FaCertificate,
     FaClock,
 } from "react-icons/fa";
+import { redirect } from "next/navigation";
 
 const MyProfile = () => {
+
     const userData = authClient.useSession();
     const user = userData.data?.user;
+
     return (
         <section className="min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-100 py-14 px-4 md:px-6 lg:px-8 overflow-hidden relative">
 

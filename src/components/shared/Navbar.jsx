@@ -4,16 +4,23 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { FiLogOut } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
     const userData = authClient.useSession();
     const user = userData.data?.user;
 
+    const router = useRouter();
+
     const handleSignOut = async () => {
         await authClient.signOut();
+        
+        toast.success("Logged out!");
+
+        router.push("/login");
     }
 
     const [menuOpen, setMenuOpen] = useState(false);
