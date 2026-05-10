@@ -1,13 +1,15 @@
-import React from 'react';
+import MyProfile from "@/components/ui/MyProfile";
+
 
 export const metadata = {
   title: "SkillSphere | Profile",
 };
 
 const ProfilePage = () => {
+ 
     return (
         <div>
-            <h1 className='font-black'>My Profile</h1>
+            <MyProfile/>
         </div>
     );
 };
