@@ -7,10 +7,8 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { TypeAnimation } from "react-type-animation";
 
-import Banner1 from "@/assets/banner1.avif"
-import Banner2 from "@/assets/banner2.avif"
-import Banner3 from "@/assets/banner3.avif"
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import Link from "next/link";
 
 const slides = [
     {
@@ -18,7 +16,7 @@ const slides = [
         title: "Upgrade Your Skills Today",
         description:
             "Discover immersive online courses designed to help you grow faster and smarter.",
-        image: Banner1.src,
+        image: "/images/banner1.avif",
             
     },
 
@@ -27,7 +25,7 @@ const slides = [
         title: "Learn From Industry Experts",
         description:
             "Master real-world skills with interactive lessons and expert mentorship.",
-        image: Banner2.src,
+        image: "/images/banner2.avif",
     },
 
     {
@@ -35,7 +33,7 @@ const slides = [
         title: "Shape Your Future With SkillSphere",
         description:
             "Explore development, design, marketing, and high-demand tech skills.",
-        image: Banner3.src,
+        image: "/images/banner3.avif",
     },
 ];
 
@@ -93,12 +91,12 @@ const Banner = () => {
 
                                 {/* BUTTON */}
                                 <div className="mt-8">
-                                    <a
+                                    <Link
                                         href="/courses"
                                         className="inline-block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-6 py-4 rounded-xl transition-all duration-300 shadow-lg"
                                     >
                                         <span className="flex items-center gap-2">Learn More <FaArrowUpRightFromSquare /></span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
