@@ -15,6 +15,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 import { toast, ToastContainer } from "react-toastify";
 
 export default function RegisterPage() {
@@ -46,7 +47,7 @@ export default function RegisterPage() {
 
         // Success Alert
         if (data) {
-            router.push('/');
+            router.push('/login');
             toast.success("Registration Successful!", {
                 position: "top-center",
             });
@@ -54,6 +55,12 @@ export default function RegisterPage() {
             e.target.reset();
         }
     };
+
+    const handleGoogleSignUp = async () => {
+        await authClient.signIn.social({
+            provider: 'google',
+        })
+    }
 
     return (
         <section className="min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-100 flex items-center justify-center px-4 py-10 overflow-hidden">
@@ -203,7 +210,7 @@ export default function RegisterPage() {
                             className="w-full bg-purple-700 text-white rounded-2xl h-14 text-base font-semibold hover:bg-purple-800 transition-all duration-300"
                         >
                             <Check />
-                            Create Account
+                            Register
                         </Button>
 
                         <Button
@@ -214,6 +221,18 @@ export default function RegisterPage() {
                             Reset
                         </Button>
 
+                    </div>
+
+                    <div>
+                        <p className="text-center text-gray-800">Or</p>
+
+                        <Button
+                            onClick={handleGoogleSignUp}
+                            className="w-full border border-purple-300 bg-white rounded-2xl h-14 text-purple-800 font-semibold mt-5 transition-all duration-300 hover:bg-purple-700 hover:text-white"
+                        >
+                            <GrGoogle/>
+                            Register with Google
+                        </Button>
                     </div>
 
                 </Form>

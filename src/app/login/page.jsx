@@ -14,6 +14,7 @@ import {
     TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { GrGoogle } from "react-icons/gr";
 import { toast, ToastContainer } from "react-toastify";
 
 export default function LoginPage() {
@@ -48,6 +49,12 @@ export default function LoginPage() {
             e.target.reset();
         }
     };
+
+    const handleGoogleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: 'google',
+        })
+    }
 
     return (
         <section className="min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-100 flex items-center justify-center px-4 py-10 overflow-hidden">
@@ -154,6 +161,18 @@ export default function LoginPage() {
                             Reset
                         </Button>
 
+                    </div>
+
+                    <div>
+                        <p className="text-center text-gray-800">Or</p>
+
+                        <Button
+                            onClick={handleGoogleSignIn}
+                            className="w-full border border-purple-300 bg-white rounded-2xl h-14 text-purple-800 font-semibold mt-5 transition-all duration-300 hover:bg-purple-700 hover:text-white"
+                        >
+                            <GrGoogle/>
+                            Sign in with Google
+                        </Button>
                     </div>
 
                 </Form>
