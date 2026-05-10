@@ -1,11 +1,20 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Navbar = () => {
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
+
+    const handleSignOut = async () => {
+        await authClient.signOut();
+    }
+
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
 
@@ -66,7 +75,7 @@ const Navbar = () => {
 
                 {/* Buttons */}
                 <div className="hidden lg:flex items-center">
-                    <ul className="flex items-center text-md gap-3 font-medium text-gray-700">
+                    { !user && <ul className="flex items-center text-md gap-3 font-medium text-gray-700">
                         <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white">
                             <Link href={"/login"}>Login</Link>
                         </li>
@@ -74,7 +83,26 @@ const Navbar = () => {
                         <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900">
                             <Link href={"/register"}>Register</Link>
                         </li>
-                    </ul>
+                    </ul> }
+
+                    {
+                        user && <div className="hidden lg:flex items-center gap-3">
+                            <Avatar>
+                                <Avatar.Image 
+                                alt="John Doe" 
+                                src={user?.image} 
+                                referrerPolicy="no-referrer"
+                                />
+
+                                <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                            </Avatar>
+
+                            <Button onClick={handleSignOut} className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900">
+                                Logout
+                            </Button>
+                        </div>
+
+                    }
                 </div>
 
                 {/* Mobile Menu Button */}
