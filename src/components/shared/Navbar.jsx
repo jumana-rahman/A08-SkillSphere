@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { FiLogOut } from "react-icons/fi";
 
 const Navbar = () => {
     const userData = authClient.useSession();
@@ -98,7 +99,7 @@ const Navbar = () => {
                             </Avatar>
 
                             <Button onClick={handleSignOut} className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900">
-                                Logout
+                                Logout <FiLogOut />
                             </Button>
                         </div>
 
@@ -137,38 +138,38 @@ const Navbar = () => {
                             </li>
                         ))}
 
-                            { !user && <ul>
-                                    <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center">
-                                    <Link href={"/login"} onClick={() => setMenuOpen(false)}>
-                                        Login
+                        { !user && <ul>
+                                <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center">
+                                <Link href={"/login"} onClick={() => setMenuOpen(false)}>
+                                    Login
+                                </Link>
+                                </li>
+
+                                <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900 w-full text-center">
+                                    <Link href={"/register"} onClick={() => setMenuOpen(false)}>
+                                        Register
                                     </Link>
-                                    </li>
+                                </li>
+                            </ul>
+                        }
 
-                                    <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900 w-full text-center">
-                                        <Link href={"/register"} onClick={() => setMenuOpen(false)}>
-                                            Register
-                                        </Link>
-                                    </li>
-                                </ul>
-                            }
+                        {
+                            user && <div className="flex flex-col justify-center items-center gap-2">
+                                <Avatar>
+                                    <Avatar.Image 
+                                    alt="John Doe" 
+                                    src={user?.image} 
+                                    referrerPolicy="no-referrer"
+                                    />
 
-                            {
-                                user && <div className="flex flex-col justify-center items-center gap-2">
-                                    <Avatar>
-                                        <Avatar.Image 
-                                        alt="John Doe" 
-                                        src={user?.image} 
-                                        referrerPolicy="no-referrer"
-                                        />
+                                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                                </Avatar>
 
-                                        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-                                    </Avatar>
-
-                                    <Button onClick={handleSignOut} className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900">
-                                        Logout
-                                    </Button>
-                                </div>
-                            }
+                                <Button onClick={handleSignOut} className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900">
+                                    Logout <FiLogOut />
+                                </Button>
+                            </div>
+                        }
                     </ul>
                 </div>
             )}
