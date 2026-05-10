@@ -36,8 +36,10 @@ const CoursesCard = ({ course }) => {
                             {course.category}
                         </span>
 
-                        <h3 className="text-xl font-bold group-hover:text-purple-700 transition-all">
+                        <h3>
+                            <Link href={`/courses/${course.id}`}className="text-xl font-bold group-hover:text-purple-700 transition-all">
                             {course.title}
+                        </Link>
                         </h3>
 
                         <p className="mt-3 text-gray-600">
