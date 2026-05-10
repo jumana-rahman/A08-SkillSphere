@@ -137,17 +137,38 @@ const Navbar = () => {
                             </li>
                         ))}
 
-                        <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center">
-                            <Link href={"/login"} onClick={() => setMenuOpen(false)}>
-                                Login
-                            </Link>
-                        </li>
+                            { !user && <ul>
+                                    <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center">
+                                    <Link href={"/login"} onClick={() => setMenuOpen(false)}>
+                                        Login
+                                    </Link>
+                                    </li>
 
-                        <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900 w-full text-center">
-                            <Link href={"/register"} onClick={() => setMenuOpen(false)}>
-                                Register
-                            </Link>
-                        </li>
+                                    <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900 w-full text-center">
+                                        <Link href={"/register"} onClick={() => setMenuOpen(false)}>
+                                            Register
+                                        </Link>
+                                    </li>
+                                </ul>
+                            }
+
+                            {
+                                user && <div className="flex flex-col justify-center items-center gap-2">
+                                    <Avatar>
+                                        <Avatar.Image 
+                                        alt="John Doe" 
+                                        src={user?.image} 
+                                        referrerPolicy="no-referrer"
+                                        />
+
+                                        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                                    </Avatar>
+
+                                    <Button onClick={handleSignOut} className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900">
+                                        Logout
+                                    </Button>
+                                </div>
+                            }
                     </ul>
                 </div>
             )}
