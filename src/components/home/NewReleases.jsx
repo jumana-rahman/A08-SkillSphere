@@ -55,14 +55,6 @@ const NewReleases = () => {
                 {/* Heading */}
                 <div className="text-center">
 
-                    <div className="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-6 py-3 rounded-full font-semibold">
-
-                        <FaFire />
-
-                        Fresh Learning Experience
-
-                    </div>
-
                     <div className="relative inline-block overflow-hidden">
 
                         <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 py-2 bg-clip-text text-transparent">
