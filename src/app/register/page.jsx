@@ -47,6 +47,9 @@ export default function RegisterPage() {
 
         // Success Alert
         if (data) {
+            // Remove automatic session
+            await authClient.signOut();
+            
             toast.success("Registration Successful! Redirecting to login...", {
             position: "top-center",
         });
