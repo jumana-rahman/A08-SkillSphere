@@ -146,7 +146,7 @@ const Navbar = () => {
                         ))}
 
                         { !user && <ul>
-                                <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center">
+                                <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center mb-2">
                                 <Link href={"/login"} onClick={() => setMenuOpen(false)}>
                                     Login
                                 </Link>
