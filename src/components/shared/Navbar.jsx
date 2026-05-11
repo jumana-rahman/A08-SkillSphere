@@ -146,13 +146,13 @@ const Navbar = () => {
                         ))}
 
                         { !user && <ul>
-                                <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full text-center mb-2">
+                                <li className="py-2 px-3 rounded-md border border-gray-700 transition-all duration-300 hover:bg-purple-700 hover:text-white w-full mx-auto text-center mb-2">
                                 <Link href={"/login"} onClick={() => setMenuOpen(false)}>
                                     Login
                                 </Link>
                                 </li>
 
-                                <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900 w-full text-center">
+                                <li className="bg-purple-700 border border-purple-700 text-white py-2 px-3 rounded-md transition-all duration-300 hover:bg-purple-900 w-full mx-auto text-center">
                                     <Link href={"/register"} onClick={() => setMenuOpen(false)}>
                                         Register
                                     </Link>
