@@ -1,6 +1,7 @@
 "use client";
 
 import { FaBrain, FaClock, FaBookOpen, FaLightbulb } from "react-icons/fa";
+import { RiCheckboxMultipleBlankFill } from "react-icons/ri";
 
 const studyTips = [
     {
@@ -12,6 +13,11 @@ const studyTips = [
         icon: <FaBookOpen />,
         title: "Smart Revision",
         desc: "Revise regularly to strengthen memory retention.",
+    },
+    {
+        icon: <FaLightbulb />,
+        title: "Teach What You Learn",
+        desc: "Explaining concepts to others helps you understand better.",
     },
 ];
 
@@ -26,6 +32,11 @@ const timeTips = [
         title: "Daily Planning",
         desc: "Plan tasks daily to stay consistent and productive.",
     },
+    {
+        icon: <RiCheckboxMultipleBlankFill />,
+        title: "Avoid Multitasking",
+        desc: "Focus on one task at a time to improve efficiency.",
+    },
 ];
 
 const LearningTips = () => {
@@ -35,9 +46,16 @@ const LearningTips = () => {
             {/* Heading */}
             <div className="max-w-7xl mx-auto text-center">
 
-                <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 bg-clip-text text-transparent">
-                    Learning Tips
-                </h1>
+                <div className="relative inline-block overflow-hidden">
+    
+                    <h1 className="mt-5 text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 py-2 bg-clip-text text-transparent">
+                        Learning Tips
+                    </h1>
+
+                    {/* Glass Shine Effect */}
+                    <span className="absolute top-0 -left-[120%] w-[60%] h-full bg-white/40 blur-md rotate-12 animate-shine"></span>
+
+                </div>
 
                 <p className="mt-5 text-gray-600 max-w-2xl mx-auto">
                     Improve your study habits with structured techniques and time management strategies.
@@ -51,8 +69,8 @@ const LearningTips = () => {
                 {/* Study Techniques */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg border border-purple-100">
 
-                    <h2 className="text-2xl font-bold text-purple-700 mb-6">
-                        📘 Study Techniques
+                    <h2 className="text-2xl font-bold text-purple-700 mb-6 border border-b-gray-500">
+                        Study Techniques
                     </h2>
 
                     <div className="space-y-6">
@@ -84,8 +102,8 @@ const LearningTips = () => {
                 {/* Time Management */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg border border-purple-100">
 
-                    <h2 className="text-2xl font-bold text-fuchsia-700 mb-6">
-                        ⏳ Time Management Tips
+                    <h2 className="text-2xl font-bold text-fuchsia-700 mb-6 border border-b-gray-500">
+                        Time Management
                     </h2>
 
                     <div className="space-y-6">
