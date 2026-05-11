@@ -234,23 +234,6 @@ const MyProfile = () => {
 
             </div>
 
-            {/* Shine Animation */}
-            <style jsx>{`
-                @keyframes shine {
-                    0% {
-                        left: -120%;
-                    }
-
-                    100% {
-                        left: 150%;
-                    }
-                }
-
-                .animate-shine {
-                    animation: shine 3s linear infinite;
-                }
-            `}</style>
-
         </section>
     );
 };

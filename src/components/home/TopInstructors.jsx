@@ -16,7 +16,7 @@ const TopInstructors = async () => {
 
                 <div className="relative inline-block overflow-hidden">
 
-                    <h1 className="mt-5 text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 bg-clip-text text-transparent">
+                    <h1 className="mt-5 text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 py-2 bg-clip-text text-transparent">
                         Top Instructors
                     </h1>
 

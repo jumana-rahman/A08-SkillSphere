@@ -30,7 +30,7 @@ const CourseDetails = ({ courses }) => {
                         {/* Title */}
                         <div className="relative inline-block overflow-hidden mt-5">
 
-                            <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 bg-clip-text text-transparent leading-tight">
+                            <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-purple-900 via-fuchsia-700 to-indigo-700 py-2 bg-clip-text text-transparent leading-tight">
                                 {courses.title}
                             </h1>
 
