@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import CoursesCard from "../ui/CoursesCard";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 const PopularCourses = async () => {
     const res = await fetch('https://a08-skill-sphere.vercel.app/data.json')
@@ -30,13 +32,14 @@ const PopularCourses = async () => {
                     </p>
                 </div>
                 
-                {/* Cards */}
-                <div className="max-w-7xl mx-auto mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {topRated.map(course => 
-                        <CoursesCard key={course.id} course={course}/>
-                
-                    )}
-                </div>
+                <Suspense fallback={<LoadingSpinner/>}>
+                    {/* Cards */}
+                    <div className="max-w-7xl mx-auto mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {topRated.map(course => 
+                            <CoursesCard key={course.id} course={course}/>
+                        )}
+                    </div>
+                </Suspense>
             </div>
         </div>
     );
