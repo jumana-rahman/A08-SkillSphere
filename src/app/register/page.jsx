@@ -24,41 +24,62 @@ export default function RegisterPage() {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        const name = e.target.name.value;
-        const image = e.target.image.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
+        const name = e.target.name.value.trim();
+        const image = e.target.image.value.trim();
+        const email = e.target.email.value.trim();
+        const password = e.target.password.value.trim();
 
-        const {data, error} = await authClient.signUp.email({
+        // CLIENT-SIDE VALIDATION
+        if (!name || !image || !email || !password) {
+            toast.error("Registration Failed", {
+                position: "top-center",
+            });
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            toast.error("Registration Failed", {
+                position: "top-center",
+            });
+            return;
+        }
+
+        // Password validation (basic)
+        if (password.length < 6) {
+            toast.error("Registration Failed", {
+                position: "top-center",
+            });
+            return;
+        }
+
+        const { data, error } = await authClient.signUp.email({
             name,
             image,
             email,
             password
         });
 
-        // Error Alert
         if (error) {
-            toast.error(error.message || "Registration Failed!", {
+            toast.error("Registration Failed", {
                 position: "top-center",
             });
-
             return;
         }
 
-        // Success Alert
         if (data) {
-            // Remove automatic session
             await authClient.signOut();
-            
+
             toast.success("Registration Successful! Redirecting to login...", {
-            position: "top-center",
-        });
+                position: "top-center",
+            });
 
-        e.target.reset();
+            e.target.reset();
 
-        setTimeout(() => {
-            router.push('/login');
-        }, 1500);
+            setTimeout(() => {
+                router.push('/login');
+            }, 1500);
         }
     };
 
