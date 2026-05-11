@@ -47,12 +47,15 @@ export default function RegisterPage() {
 
         // Success Alert
         if (data) {
-            router.push('/login');
-            toast.success("Registration Successful!", {
-                position: "top-center",
-            });
+            toast.success("Registration Successful! Redirecting to login...", {
+            position: "top-center",
+        });
 
-            e.target.reset();
+        e.target.reset();
+
+        setTimeout(() => {
+            router.push('/login');
+        }, 1500);
         }
     };
 
