@@ -1,6 +1,4 @@
-import { Suspense } from "react";
 import InstructorSlider from "./InstructorSlider";
-import LoadingSpinner from "../ui/LoadingSpinner";
 
 const TopInstructors = async () => {
 
@@ -33,12 +31,11 @@ const TopInstructors = async () => {
                 </p>
 
             </div>
-            <Suspense fallback={<LoadingSpinner/>}>
-                {/* Slider Component */}
-                <div className="max-w-7xl mx-auto mt-16">
-                    <InstructorSlider instructors={instructors} />
-                </div>
-            </Suspense>
+
+            {/* Slider Component */}
+            <div className="max-w-7xl mx-auto mt-16">
+                <InstructorSlider instructors={instructors} />
+            </div>
 
         </section>
     );
