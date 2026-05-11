@@ -69,7 +69,7 @@ const LearningTips = () => {
                 {/* Study Techniques */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg border border-purple-100">
 
-                    <h2 className="text-2xl font-bold text-purple-700 mb-6 pb-2 border-b border-gray-400">
+                    <h2 className="text-2xl font-bold text-purple-700 mb-6 pb-2 border-b border-gray-200">
                         Study Techniques
                     </h2>
 
@@ -102,7 +102,7 @@ const LearningTips = () => {
                 {/* Time Management */}
                 <div className="bg-white rounded-3xl p-8 shadow-lg border-purple-100">
 
-                    <h2 className="text-2xl font-bold text-fuchsia-700 mb-6 pb-2 border-b border-gray-400">
+                    <h2 className="text-2xl font-bold text-fuchsia-700 mb-6 pb-2 border-b border-gray-200">
                         Time Management
                     </h2>
 
